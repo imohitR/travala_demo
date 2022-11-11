@@ -6,7 +6,6 @@ import 'package:travalacom/theme/core/flex_theme_light.dart';
 import 'package:travalacom/theme/core/theme_data_dark.dart';
 import 'package:travalacom/theme/core/theme_data_light.dart';
 import 'package:travalacom/theme/shared/controllers/theme_controller.dart';
-import 'package:travalacom/theme/shared/services/theme_service.dart';
 import 'package:travalacom/theme/shared/utils/app_scroll_behavior.dart';
 
 class MyApp extends ConsumerWidget {

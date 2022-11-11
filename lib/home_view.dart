@@ -1,17 +1,13 @@
-import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:travalacom/theme/utils/app_sizes.dart';
 import 'package:travalacom/widget.dart/bottom_bar.dart';
 import 'package:travalacom/widget.dart/carousel.dart';
 import 'package:travalacom/widget.dart/destination_heading.dart';
 import 'package:travalacom/widget.dart/explore_drawer.dart';
 import 'package:travalacom/widget.dart/featured_heading.dart';
 import 'package:travalacom/widget.dart/featured_tiles.dart';
-import 'package:travalacom/widget.dart/floating_quick_access_bar.dart';
+import 'package:travalacom/widget.dart/Tabbar.dart';
 import 'package:travalacom/widget.dart/responsive.dart';
-import 'package:travalacom/widget.dart/top_bar_contents.dart';
+import 'package:travalacom/widget.dart/Desktop.dart';
 import 'package:travalacom/widget.dart/web_scrollbar.dart';
 
 class HomeView extends StatefulWidget {
@@ -82,16 +78,16 @@ class _HomeViewState extends State<HomeView> {
             children: [
               Stack(
                 children: [
-                  Container(
-                    child: SizedBox(
-                      height: screenSize.height * 0.45,
-                      width: screenSize.width,
-                      child: Image.asset(
-                        'assets/images/cover.jpg',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
+                  // // Container(
+                  // //   child: SizedBox(
+                  // //     height: screenSize.height * 0.45,
+                  // //     width: screenSize.width,
+                  // //     child: Image.asset(
+                  // //       'assets/images/cover.jpg',
+                  // //       fit: BoxFit.cover,
+                  // //     ),
+                  // //   ),
+                  // // ),
                   // gapH32,
                   // Container(
                   //     // alignment: Alignment.center,
@@ -104,7 +100,8 @@ class _HomeViewState extends State<HomeView> {
                   // )),
                   Column(
                     children: [
-                      FloatingQuickAccessBar(screenSize: screenSize),
+                      Tabbar(),
+                      // FloatingQuickAccessBar(screenSize: screenSize),
                       Container(
                         child: Column(
                           children: [

@@ -6,7 +6,8 @@ class BottomBarColumn extends StatelessWidget {
   final String s2;
   final String s3;
 
-  BottomBarColumn({
+  const BottomBarColumn({
+    super.key,
     required this.heading,
     required this.s1,
     required this.s2,
@@ -16,7 +17,7 @@ class BottomBarColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 20.0),
+      padding: const EdgeInsets.only(bottom: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,7 +29,7 @@ class BottomBarColumn extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
@@ -38,7 +39,7 @@ class BottomBarColumn extends StatelessWidget {
               fontSize: 14,
             ),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Text(
             s2,
             style: TextStyle(
@@ -46,7 +47,7 @@ class BottomBarColumn extends StatelessWidget {
               fontSize: 14,
             ),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Text(
             s3,
             style: TextStyle(

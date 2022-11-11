@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:travalacom/app.dart';
 import 'package:travalacom/home_view.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
