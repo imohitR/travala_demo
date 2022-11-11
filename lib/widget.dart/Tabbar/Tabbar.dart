@@ -137,8 +137,8 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:travalacom/widget.dart/Tabbar/Stays.dart';
+import 'package:travalacom/widget.dart/Tabbar/flights.dart';
 
 class Tabbar extends StatefulWidget {
   const Tabbar({super.key});
@@ -150,6 +150,7 @@ class Tabbar extends StatefulWidget {
 class _TabbarState extends State<Tabbar> {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return DefaultTabController(
       length: 3,
       child: Scrollbar(
@@ -182,41 +183,81 @@ class _TabbarState extends State<Tabbar> {
                   // const SizedBox(
                   //   height: 5,
                   // ),
-                  Container(
-                    child: const TabBar(
-                      //controller: _tabController,
-                      labelColor: Colors.blue,
-                      unselectedLabelColor: Color.fromARGB(193, 138, 135, 135),
-                      // controller: _tabController,
-                      tabs: [
-                        Tab(
-                          text: "Stays",
-                          icon: Icon(
-                            Icons.hotel_outlined,
-                          ),
+                  PreferredSize(
+                      child: const Align(
+                        alignment: Alignment.centerLeft,
+                        child: TabBar(
+                          //isScrollable: true,
+                          //controller: _tabController,
+                          labelColor: Colors.blue,
+                          unselectedLabelColor:
+                              Color.fromARGB(193, 138, 135, 135),
+                          // controller: _tabController,
+                          tabs: [
+                            Tab(
+                              text: "Stays",
+                              icon: Icon(
+                                Icons.hotel_outlined,
+                              ),
+                            ),
+                            // SizedBox(
+                            //   width: screenSize.width / 300,
+                            // ),
+                            Tab(
+                              text: "Flights",
+                              icon: Icon(
+                                Icons.airplanemode_active,
+                              ),
+                            ),
+                            Tab(
+                              text: "Activities",
+                              icon: Icon(
+                                Icons.local_activity_outlined,
+                              ),
+                            ),
+                          ],
                         ),
-                        Tab(
-                          text: "Flights",
-                          icon: Icon(
-                            Icons.airplanemode_active,
-                          ),
-                        ),
-                        Tab(
-                          text: "Activities",
-                          icon: Icon(
-                            Icons.local_activity_outlined,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                      ),
+                      preferredSize: screenSize),
+                  // Container(
+                  //   child: const TabBar(
+                  //     isScrollable: true,
+                  //     //controller: _tabController,
+                  //     labelColor: Colors.blue,
+                  //     unselectedLabelColor: Color.fromARGB(193, 138, 135, 135),
+                  //     // controller: _tabController,
+                  //     tabs: [
+                  //       Tab(
+                  //         text: "Stays",
+                  //         icon: Icon(
+                  //           Icons.hotel_outlined,
+                  //         ),
+                  //       ),
+                  //       // SizedBox(
+                  //       //   width: screenSize.width / 300,
+                  //       // ),
+                  //       Tab(
+                  //         text: "Flights",
+                  //         icon: Icon(
+                  //           Icons.airplanemode_active,
+                  //         ),
+                  //       ),
+                  //       Tab(
+                  //         text: "Activities",
+                  //         icon: Icon(
+                  //           Icons.local_activity_outlined,
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   Container(
                     margin: const EdgeInsets.only(top: 15),
                     width: double.maxFinite,
                     height: 300,
                     child: const TabBarView(
                         // controller: _tabController,
-                        children: [Text(''), Text('bhjg'), Text('786')]),
+                        children: [Stays(), Flight(), Text('786')]),
                   ),
                 ],
               ),

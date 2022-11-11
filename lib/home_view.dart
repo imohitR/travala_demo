@@ -5,7 +5,7 @@ import 'package:travalacom/widget.dart/destination_heading.dart';
 import 'package:travalacom/widget.dart/explore_drawer.dart';
 import 'package:travalacom/widget.dart/featured_heading.dart';
 import 'package:travalacom/widget.dart/featured_tiles.dart';
-import 'package:travalacom/widget.dart/Tabbar.dart';
+import 'package:travalacom/widget.dart/Tabbar/Tabbar.dart';
 import 'package:travalacom/widget.dart/responsive.dart';
 import 'package:travalacom/widget.dart/Desktop.dart';
 import 'package:travalacom/widget.dart/web_scrollbar.dart';
@@ -116,7 +116,7 @@ class _HomeViewState extends State<HomeView> {
                   )
                 ],
               ),
-              WorldWideDestination(screenSize: screenSize),
+              WorldWideDestination(screenSize: screenSize), //change
               DestinationCarousel(),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),
