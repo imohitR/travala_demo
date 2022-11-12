@@ -10,93 +10,97 @@ class Stays extends StatefulWidget {
 class _StaysState extends State<Stays> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(children: [
-        const Text(
-          "BOOK HOTELS AND SAVE UP TO 40%",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.black),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        const Text(
-          "Best Prices Guaranteed On 2,200,000+\n Hotels & Accommodations Worldwide",
-          style: TextStyle(fontSize: 14.0),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Center(
-          child: Positioned(
-            top: 56,
-            left: 50,
-            child: Card(
-              color: Color.fromARGB(255, 240, 235, 235),
-              // elevation: 16,
-              child: Column(
-                children: [
-                  const ListTile(
-                    leading: Icon(
-                      Icons.search,
-                      color: Colors.blue,
-                    ),
-                    title: TextField(
-                      decoration: InputDecoration(
-                          hintText: 'Search for Places or Properties'),
-                    ),
-                    minLeadingWidth: 10,
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      MaterialButton(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 24, vertical: 12),
-                        onPressed: () {},
-                        child: buildDateSelector('CHECK-IN', DateTime.now()),
+    return SingleChildScrollView(
+      child: Center(
+        child: Column(children: [
+          const Text(
+            "BOOK HOTELS AND SAVE UP TO 40%",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18.0,
+                color: Colors.black),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const Text(
+            "Best Prices Guaranteed On 2,200,000+\n Hotels & Accommodations Worldwide",
+            style: TextStyle(fontSize: 14.0),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Center(
+            child: Positioned(
+              top: 56,
+              left: 50,
+              child: Card(
+                color: Color.fromARGB(255, 240, 235, 235),
+                // elevation: 16,
+                child: Column(
+                  children: [
+                    const ListTile(
+                      leading: Icon(
+                        Icons.search,
+                        color: Colors.blue,
                       ),
-                      Expanded(
-                          child: MaterialButton(
+                      title: TextField(
+                        decoration: InputDecoration(
+                            hintText: 'Search for Places or Properties'),
+                      ),
+                      minLeadingWidth: 10,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        MaterialButton(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 24, vertical: 12),
+                          onPressed: () {},
+                          child: buildDateSelector('CHECK-IN', DateTime.now()),
+                        ),
+                        Expanded(
+                            child: MaterialButton(
+                          onPressed: () {},
+                          child: buildDateSelector('CHECK-OUT', DateTime.now()),
+                        ))
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    const ListTile(
+                      leading: Icon(Icons.family_restroom),
+                      title: Text("1 room - 2 adults - 0 child"),
+                      minLeadingWidth: 10,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
+                      width: 300,
+                      height: 40,
+                      child: MaterialButton(
+                        color: Colors.blue,
                         onPressed: () {},
-                        child: buildDateSelector('CHECK-OUT', DateTime.now()),
-                      ))
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  const ListTile(
-                    leading: Icon(Icons.family_restroom),
-                    title: Text("1 room - 2 adults - 0 child"),
-                    minLeadingWidth: 10,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    width: 300,
-                    height: 40,
-                    child: MaterialButton(
-                      color: Colors.blue,
-                      onPressed: () {},
-                      shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(9))),
-                      child: const Text(
-                        'Search',
-                        style: TextStyle(color: Colors.white),
+                        shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(9))),
+                        child: const Text(
+                          'Search',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      ]),
+        ]),
+      ),
     );
   }
 }

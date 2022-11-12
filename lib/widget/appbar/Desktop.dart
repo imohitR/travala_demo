@@ -160,7 +160,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 900),
+                  SizedBox(
+                    width: screenSize.width / 20,
+                  ),
                   InkWell(
                     onHover: (value) {
                       setState(() {
