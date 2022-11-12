@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:travalacom/widget.dart/bottom_bar.dart';
-import 'package:travalacom/widget.dart/carousel.dart';
-import 'package:travalacom/widget.dart/destination_heading.dart';
-import 'package:travalacom/widget.dart/explore_drawer.dart';
-import 'package:travalacom/widget.dart/featured_heading.dart';
-import 'package:travalacom/widget.dart/featured_tiles.dart';
-import 'package:travalacom/widget.dart/Tabbar/Tabbar.dart';
-import 'package:travalacom/widget.dart/responsive.dart';
-import 'package:travalacom/widget.dart/Desktop.dart';
-import 'package:travalacom/widget.dart/web_scrollbar.dart';
+import 'package:travalacom/utils/replaced_range.dart';
+import 'package:travalacom/widget/bottom_bar.dart';
+import 'package:travalacom/widget/carousel.dart';
+import 'package:travalacom/widget/destination_heading.dart';
+import 'package:travalacom/widget/explore_drawer.dart';
+import 'package:travalacom/widget/featured_heading.dart';
+import 'package:travalacom/widget/featured_tiles.dart';
+import 'package:travalacom/widget/Tabbar/Tabbar.dart';
+import 'package:travalacom/widget/responsive.dart';
+import 'package:travalacom/widget/Desktop.dart';
+import 'package:travalacom/widget/web_scrollbar.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -42,29 +43,42 @@ class _HomeViewState extends State<HomeView> {
         ? _scrollPosition / (screenSize.height * 0.40)
         : 1;
     return Scaffold(
+      endDrawer: TravalaDrawer(),
       backgroundColor: Theme.of(context).backgroundColor,
       // extendBodyBehindAppBar: true,
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppBar(
-              backgroundColor: Theme.of(context).primaryColor,
+              backgroundColor: Color.fromARGB(255, 3, 16, 87),
               elevation: 0,
               // centerTitle: true,
-              actions: [],
-              title: const Text(
+              actions: [
+                Builder(
+                  builder: (context) => IconButton(
+                    icon: Icon(
+                      Icons.menu,
+                      color: Colors.white,
+                    ),
+                    onPressed: () => Scaffold.of(context).openEndDrawer(),
+                    tooltip:
+                        MaterialLocalizations.of(context).openAppDrawerTooltip,
+                  ),
+                ),
+              ],
+              title: Text(
                 'Travala.com',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2,
                 ),
+                textScaleFactor: ScaleSize.textScaleFactor(context),
               ),
             )
           : PreferredSize(
               preferredSize: Size(screenSize.width, 1000),
               child: TopBarContents(_opacity),
             ),
-      endDrawer: const TravalaDrawer(),
+
       body: WebScrollbar(
         color: Colors.blueGrey,
         backgroundColor: Colors.blueGrey.withOpacity(0.3),
@@ -78,16 +92,16 @@ class _HomeViewState extends State<HomeView> {
             children: [
               Stack(
                 children: [
-                  // // Container(
-                  // //   child: SizedBox(
-                  // //     height: screenSize.height * 0.45,
-                  // //     width: screenSize.width,
-                  // //     child: Image.asset(
-                  // //       'assets/images/cover.jpg',
-                  // //       fit: BoxFit.cover,
-                  // //     ),
-                  // //   ),
-                  // // ),
+                  Container(
+                    child: SizedBox(
+                      height: screenSize.height * 0.90,
+                      width: screenSize.width,
+                      child: Image.asset(
+                        'assets/images/cover.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
                   // gapH32,
                   // Container(
                   //     // alignment: Alignment.center,
@@ -100,21 +114,23 @@ class _HomeViewState extends State<HomeView> {
                   // )),
                   Column(
                     children: [
-                      Tabbar(),
-                      // FloatingQuickAccessBar(screenSize: screenSize),
-                      Container(
-                        child: Column(
-                          children: [
-                            FeaturedHeading(
-                              screenSize: screenSize,
-                            ),
-                            FeaturedTiles(screenSize: screenSize)
-                          ],
-                        ),
+                      Tabbar(
+                        screenSize: screenSize,
                       ),
+                      // FloatingQuickAccessBar(screenSize: screenSize),
                     ],
                   )
                 ],
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    FeaturedHeading(
+                      screenSize: screenSize,
+                    ),
+                    FeaturedTiles(screenSize: screenSize)
+                  ],
+                ),
               ),
               WorldWideDestination(screenSize: screenSize), //change
               DestinationCarousel(),

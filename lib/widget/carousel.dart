@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:travalacom/widget.dart/responsive.dart';
+import 'package:travalacom/widget/responsive.dart';
 
 class DestinationCarousel extends StatefulWidget {
   @override
