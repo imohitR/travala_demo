@@ -10,7 +10,7 @@ import 'package:travalacom/theme/shared/utils/app_scroll_behavior.dart';
 
 class MyApp extends ConsumerWidget {
   final ThemeController controller;
-  MyApp({
+  const MyApp({
     Key? key,
     required this.controller,
   }) : super(key: key);
@@ -23,7 +23,8 @@ class MyApp extends ConsumerWidget {
           return MaterialApp.router(
             restorationScopeId: 'app',
             themeMode: controller.themeMode,
-            onGenerateTitle: (BuildContext context) => 'Flutter Shop',
+            onGenerateTitle: (BuildContext context) =>
+                'Book Hotels, Flights, Tours & Activities with Crypto on Travala.com',
             scrollBehavior: const AppScrollBehavior(),
             theme: controller.useFlexColorScheme
                 ? flexThemeLight(controller)

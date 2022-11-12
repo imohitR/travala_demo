@@ -175,7 +175,7 @@ class _TabbarState extends State<Tabbar> with SingleTickerProviderStateMixin {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 150),
               const Align(
                 alignment: Alignment.centerLeft,
                 child: TabBar(

@@ -2,6 +2,21 @@
 class Assets {
   Assets._();
 
-  static const String assetsFonts = 'assets/fonts';
+  static const String fontsContax = 'assets/fonts/contax.ttf';
+  static const String fontsRobotoRegular = 'assets/fonts/Roboto-Regular.ttf';
+  static const String imagesAfrica = 'assets/images/africa.jpg';
+  static const String imagesAnimals = 'assets/images/animals.jpg';
+  static const String imagesAntarctica = 'assets/images/antarctica.jpg';
+  static const String imagesAsia = 'assets/images/asia.jpg';
+  static const String imagesAustralia = 'assets/images/australia.jpg';
+  static const String imagesCover = 'assets/images/cover.jpg';
+  static const String imagesEurope = 'assets/images/europe.jpg';
+  static const String imagesFirstcard = 'assets/images/firstcard.jpeg';
+  static const String imagesGoogleLogo = 'assets/images/google_logo.png';
+  static const String imagesNorthAmerica = 'assets/images/north_america.jpg';
+  static const String imagesPhotography = 'assets/images/photography.jpeg';
+  static const String imagesSouthAmerica = 'assets/images/south_america.jpg';
+  static const String imagesTrekking = 'assets/images/trekking.jpg';
+  static const String lottieError404 = 'assets/lottie/error404.json';
 
 }

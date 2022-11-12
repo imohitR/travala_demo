@@ -11,9 +11,9 @@ class Featured extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'assets/images/Capture1.jpg',
-    'assets/images/Capture3.jpg',
-    'assets/images/Capture3.jpg',
+    'assets/images/w1.jpg',
+    'assets/images/w2.jpg',
+    'assets/images/w3.jpg',
     // 'assets/images/photography.jpeg',
   ];
 

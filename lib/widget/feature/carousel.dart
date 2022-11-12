@@ -12,21 +12,14 @@ class _CarouselPageState extends State<CarouselPage> {
   final PageController controller = PageController();
 
   List<String> images = [
-    'assets/images/firstcard.jpeg',
-    'assets/images/firstcard.jpeg',
-    'assets/images/firstcard.jpeg',
+    'assets/images/q1.png',
+    'assets/images/q2.png',
   ];
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return
-        // Scaffold(
-        //   appBar: AppBar(
-        //     title: const Text("Carousel Slider"),
-        //   ),
-        //   body:
-        Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
@@ -61,26 +54,6 @@ class _CarouselPageState extends State<CarouselPage> {
               buildIndicator(currentIndex == i)
           ],
         ),
-        // Padding(
-        //   padding: const EdgeInsets.all(8.0),
-        //   child: Row(
-        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //     children: [
-        //       IconButton(
-        //         onPressed: () {
-        //           controller.jumpToPage(currentIndex - 1);
-        //         },
-        //         icon: Icon(Icons.arrow_back),
-        //       ),
-        //       IconButton(
-        //         onPressed: () {
-        //           controller.jumpToPage(currentIndex + 1);
-        //         },
-        //         icon: Icon(Icons.arrow_forward),
-        //       ),
-        //     ],
-        //   ),
-        // ),
       ],
       //),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travalacom/theme/utils/app_sizes.dart';
 import 'package:travalacom/utils/replaced_range.dart';
 import 'package:travalacom/widget/bottom_bar.dart';
 import 'package:travalacom/widget/carousel.dart';
@@ -13,6 +14,7 @@ import 'package:travalacom/widget/Tabbar/Tabbar.dart';
 import 'package:travalacom/widget/responsive.dart';
 import 'package:travalacom/widget/appbar/Desktop.dart';
 import 'package:travalacom/widget/web_scrollbar.dart';
+import 'package:universal_html/js_util.dart';
 
 import 'widget/feature/feature.dart';
 
@@ -97,14 +99,35 @@ class _HomeViewState extends State<HomeView> {
             children: [
               Stack(
                 children: [
+                  SizedBox(
+                    height: screenSize.height * 0.90,
+                    width: screenSize.width,
+                    // child: Image.asset(
+                    //   'assets/images/cover.jpg',
+                    //   fit: BoxFit.cover,
+                    // ),
+                  ),
                   Container(
-                    child: SizedBox(
-                      height: screenSize.height * 0.90,
-                      width: screenSize.width,
-                      child: Image.asset(
-                        'assets/images/cover.jpg',
-                        fit: BoxFit.cover,
-                      ),
+                    alignment: Alignment.center,
+                    child: RichText(
+                      text: const TextSpan(
+                          text: 'BOOK HOTELS AND SAVE UP TO 40%',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22.0,
+                            color: Colors.black,
+                          ),
+                          children: [
+                            TextSpan(
+                                text:
+                                    '\nBest Prices Guaranteed On 2,200,000+\n Hotels & Accommodations Worldwide',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18.0,
+                                  color: Colors.blueAccent,
+                                ))
+                          ]),
+                      textScaleFactor: ScaleSize.textScaleFactor(context),
                     ),
                   ),
                   Column(
@@ -121,15 +144,15 @@ class _HomeViewState extends State<HomeView> {
                 child: Column(
                   children: [
                     Featured(screenSize: screenSize),
-                    // SizedBox(
-                    //   height: 10,
-                    // ),
+
+                    const Divider(),
+                    gapH48,
                     const CarouselPage(),
-                    SizedBox(
-                      height: 10,
-                    ),
+
                     ReviewHeading(screenSize: screenSize),
                     ReviewDetail(screenSize: screenSize),
+                    WorldWideDestination(screenSize: screenSize), //change
+                    DestinationCarousel(),
                     FeaturedHeading(
                       screenSize: screenSize,
                     ),
@@ -137,8 +160,6 @@ class _HomeViewState extends State<HomeView> {
                   ],
                 ),
               ),
-              WorldWideDestination(screenSize: screenSize), //change
-              DestinationCarousel(),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),
             ],

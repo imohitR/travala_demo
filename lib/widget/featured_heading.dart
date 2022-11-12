@@ -24,43 +24,45 @@ class FeaturedHeading extends StatelessWidget {
               children: [
                 Row(),
                 const Text(
-                  'TOP COUNTRIES AND TERRITORIES',
+                  'Top Countries and Territories',
                   style: TextStyle(
                     fontSize: 24,
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 5),
-                Text(
-                  'Unique wildlife tours & destinations',
-                  textAlign: TextAlign.end,
-                  style: Theme.of(context).primaryTextTheme.subtitle1,
-                ),
-                SizedBox(height: 10),
+                // SizedBox(height: 5),
+                // Text(
+                //   'Unique wildlife tours & destinations',
+                //   textAlign: TextAlign.end,
+                //   style: Theme.of(context).primaryTextTheme.subtitle1,
+                // ),
+                const SizedBox(height: 10),
               ],
             )
-          : Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+          : Container(
+              padding: EdgeInsets.only(
+                top: screenSize.height / 10,
+                bottom: screenSize.height / 15,
+              ),
+              width: screenSize.width,
+              // color: Colors.black,
+              child: Column(children: [
+                Text(
+                  '-- Discover --',
+                  style: TextStyle(
+                      fontSize: 25, color: Colors.grey.withOpacity(0.5)),
+                ),
                 const Text(
-                  'TOP COUNTRIES AND TERRITORIES',
+                  'Top Countries and Territories',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 40,
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Expanded(
-                  child: Text(
-                    'Unique wildlife tours & destinations',
-                    textAlign: TextAlign.end,
-                    style: Theme.of(context).primaryTextTheme.subtitle1,
-                  ),
-                ),
-              ],
-            ),
+              ])),
     );
   }
 }

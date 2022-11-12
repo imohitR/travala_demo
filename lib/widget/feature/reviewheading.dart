@@ -54,7 +54,7 @@ class ReviewHeading extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 25, color: Colors.grey.withOpacity(0.5)),
                 ),
-                Text(
+                const Text(
                   'What Our Customer Say',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -65,37 +65,5 @@ class ReviewHeading extends StatelessWidget {
                 ),
               ])),
     );
-    //  Row(
-    //     mainAxisSize: MainAxisSize.max,
-    //     mainAxisAlignment: MainAxisAlignment.center,
-    //     children: [
-    //       const Text(
-    //         '-- Customer Reviews --\n',
-    //         style: TextStyle(
-    //           color: Colors.grey,
-    //           fontSize: 27,
-    //           fontFamily: 'Montserrat',
-    //           // fontWeight: FontWeight.bold,
-    //         ),
-    //       ),
-
-    //       Text(
-    //         'What Our Customer Say',
-    //         style: TextStyle(
-    //           fontSize: 24,
-    //           fontFamily: 'Montserrat',
-    //           fontWeight: FontWeight.bold,
-    //         ),
-    //       ),
-    //       // Expanded(
-    //       //   child: Text(
-    //       //     'WHAT OUR CUSTOMERS SAY',
-    //       //     textAlign: TextAlign.end,
-    //       //     style: Theme.of(context).primaryTextTheme.subtitle1,
-    //       //   ),
-    //       // ),
-    //     ],
-    //   ),
-    //);
   }
 }

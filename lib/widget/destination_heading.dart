@@ -36,15 +36,21 @@ class WorldWideDestination extends StatelessWidget {
             ),
             width: screenSize.width,
             // color: Colors.black,
-            child: const Text(
-              'WORLDWIDE DESTINATIONS',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 40,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.bold,
+            child: Column(children: [
+              Text(
+                '-- DISCOVER --',
+                style: TextStyle(
+                    fontSize: 25, color: Colors.grey.withOpacity(0.5)),
               ),
-            ),
-          );
+              const Text(
+                'Worldwide Destinations',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 40,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ]));
   }
 }
