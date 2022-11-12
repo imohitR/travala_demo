@@ -107,16 +107,6 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     ),
                   ),
-                  // gapH32,
-                  // Container(
-                  //     // alignment: Alignment.center,
-                  //     child: const Text(
-                  //   'Welcome to Travala Start You Journey Delightly',
-                  //   style: TextStyle(
-                  //       color: Color.fromARGB(255, 1, 10, 36),
-                  //       fontWeight: FontWeight.bold,
-                  //       fontSize: 22.0),
-                  // )),
                   Column(
                     children: [
                       Tabbar(
@@ -134,7 +124,7 @@ class _HomeViewState extends State<HomeView> {
                     // SizedBox(
                     //   height: 10,
                     // ),
-                    CarouselPage(),
+                    const CarouselPage(),
                     SizedBox(
                       height: 10,
                     ),
