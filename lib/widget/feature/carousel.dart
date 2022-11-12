@@ -13,8 +13,8 @@ class _CarouselPageState extends State<CarouselPage> {
 
   List<String> images = [
     'assets/images/firstcard.jpeg',
-    'assets/images/secondcard.png',
-    'assets/images/thirdcard.JPG',
+    'assets/images/firstcard.jpeg',
+    'assets/images/firstcard.jpeg',
   ];
 
   @override
@@ -43,13 +43,9 @@ class _CarouselPageState extends State<CarouselPage> {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: SizedBox(
-                  height: 300,
-                  width: double.infinity,
-                  child: Image.network(
-                    images[index % images.length],
-                    fit: BoxFit.cover,
-                  ),
+                child: Image.network(
+                  images[index % images.length],
+                  fit: BoxFit.contain,
                 ),
               );
             },

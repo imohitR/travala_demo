@@ -11,9 +11,9 @@ class Featured extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'assets/images/trekking.jpg',
-    'assets/images/animals.jpg',
-    'assets/images/photography.jpeg',
+    'assets/images/Capture1.jpg',
+    'assets/images/Capture3.jpg',
+    'assets/images/Capture3.jpg',
     // 'assets/images/photography.jpeg',
   ];
 
@@ -21,7 +21,6 @@ class Featured extends StatelessWidget {
     'Trekking',
     'Animals',
     'Photography',
-    'Photography'
   ];
 
   @override
