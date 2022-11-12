@@ -43,12 +43,12 @@ class _TopBarContentsState extends State<TopBarContents> {
                 letterSpacing: 3,
               ),
             ),
-            SizedBox(width: screenSize.width / 50),
-            // Container(
-            //   color: Colors.blueGrey,
-            //   width: 1,
-            //   height: 32,
-            // ),
+            SizedBox(width: screenSize.width / 55),
+            Container(
+              color: Colors.blueGrey,
+              width: 1,
+              height: 32,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -256,9 +256,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     )),
               ],
             ),
-            // // SizedBox(
-            // //   width: screenSize.width / 50,
-            // // ),
+
             // SizedBox(
             //   height: 34,
             //   width: 80,

@@ -4,12 +4,17 @@ import 'package:travalacom/widget/bottom_bar.dart';
 import 'package:travalacom/widget/carousel.dart';
 import 'package:travalacom/widget/destination_heading.dart';
 import 'package:travalacom/widget/explore_drawer.dart';
+import 'package:travalacom/widget/feature/Reviewdetail.dart';
+import 'package:travalacom/widget/feature/carousel.dart';
+import 'package:travalacom/widget/feature/reviewheading.dart';
 import 'package:travalacom/widget/featured_heading.dart';
 import 'package:travalacom/widget/featured_tiles.dart';
 import 'package:travalacom/widget/Tabbar/Tabbar.dart';
 import 'package:travalacom/widget/responsive.dart';
 import 'package:travalacom/widget/Desktop.dart';
 import 'package:travalacom/widget/web_scrollbar.dart';
+
+import 'widget/feature/feature.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -43,7 +48,7 @@ class _HomeViewState extends State<HomeView> {
         ? _scrollPosition / (screenSize.height * 0.40)
         : 1;
     return Scaffold(
-      endDrawer: TravalaDrawer(),
+      endDrawer: const TravalaDrawer(),
       backgroundColor: Theme.of(context).backgroundColor,
       // extendBodyBehindAppBar: true,
       appBar: ResponsiveWidget.isSmallScreen(context)
@@ -54,7 +59,7 @@ class _HomeViewState extends State<HomeView> {
               actions: [
                 Builder(
                   builder: (context) => IconButton(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.menu,
                       color: Colors.white,
                     ),
@@ -125,6 +130,16 @@ class _HomeViewState extends State<HomeView> {
               Container(
                 child: Column(
                   children: [
+                    Featured(screenSize: screenSize),
+                    // SizedBox(
+                    //   height: 10,
+                    // ),
+                    CarouselPage(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ReviewHeading(screenSize: screenSize),
+                    ReviewDetail(screenSize: screenSize),
                     FeaturedHeading(
                       screenSize: screenSize,
                     ),
