@@ -29,10 +29,12 @@ class _StaysState extends State<Stays> {
           height: 10,
         ),
         Center(
-          child: Card(
-            color: Color.fromARGB(255, 240, 235, 235),
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
+          child: Positioned(
+            top: 56,
+            left: 50,
+            child: Card(
+              color: Color.fromARGB(255, 240, 235, 235),
+              // elevation: 16,
               child: Column(
                 children: [
                   const ListTile(

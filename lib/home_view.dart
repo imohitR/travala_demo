@@ -11,7 +11,7 @@ import 'package:travalacom/widget/featured_heading.dart';
 import 'package:travalacom/widget/featured_tiles.dart';
 import 'package:travalacom/widget/Tabbar/Tabbar.dart';
 import 'package:travalacom/widget/responsive.dart';
-import 'package:travalacom/widget/Desktop.dart';
+import 'package:travalacom/widget/appbar/Desktop.dart';
 import 'package:travalacom/widget/web_scrollbar.dart';
 
 import 'widget/feature/feature.dart';
