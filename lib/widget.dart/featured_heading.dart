@@ -41,26 +41,26 @@ class FeaturedHeading extends StatelessWidget {
               ],
             )
           : Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const Text(
-                  'TOP COUNTRIES AND TERRITORIES',
-                  style: TextStyle(
-                    fontSize: 40,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Expanded(
-                  child: Text(
-                    'Unique wildlife tours & destinations',
-                    textAlign: TextAlign.end,
-                    style: Theme.of(context).primaryTextTheme.subtitle1,
-                  ),
-                ),
-              ],
-            ),
+              // mainAxisSize: MainAxisSize.max,
+              // mainAxisAlignment: MainAxisAlignment.start,
+              // children: [
+              //   const Text(
+              //     'TOP COUNTRIES AND TERRITORIES',
+              //     style: TextStyle(
+              //       fontSize: 40,
+              //       fontFamily: 'Montserrat',
+              //       fontWeight: FontWeight.bold,
+              //     ),
+              //   ),
+              //   Expanded(
+              //     child: Text(
+              //       'Unique wildlife tours & destinations',
+              //       textAlign: TextAlign.end,
+              //       style: Theme.of(context).primaryTextTheme.subtitle1,
+              //     ),
+              //   ),
+              // ],
+              ),
     );
   }
 }

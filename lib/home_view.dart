@@ -3,6 +3,10 @@ import 'package:travalacom/widget.dart/bottom_bar.dart';
 import 'package:travalacom/widget.dart/carousel.dart';
 import 'package:travalacom/widget.dart/destination_heading.dart';
 import 'package:travalacom/widget.dart/explore_drawer.dart';
+import 'package:travalacom/widget.dart/feature/Reviewdetail.dart';
+import 'package:travalacom/widget.dart/feature/carousel.dart';
+import 'package:travalacom/widget.dart/feature/feature.dart';
+import 'package:travalacom/widget.dart/feature/reviewheading.dart';
 import 'package:travalacom/widget.dart/featured_heading.dart';
 import 'package:travalacom/widget.dart/featured_tiles.dart';
 import 'package:travalacom/widget.dart/Tabbar/Tabbar.dart';
@@ -105,10 +109,24 @@ class _HomeViewState extends State<HomeView> {
                       Container(
                         child: Column(
                           children: [
+                            Featured(screenSize: screenSize),
+                            // SizedBox(
+                            //   height: 10,
+                            // ),
+                            CarouselPage(),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            ReviewHeading(screenSize: screenSize),
+                            ReviewDetail(screenSize: screenSize),
+                            // Carousel(screenSize: screenSize),
                             FeaturedHeading(
                               screenSize: screenSize,
                             ),
-                            FeaturedTiles(screenSize: screenSize)
+                            FeaturedTiles(screenSize: screenSize),
+                            // SizedBox(
+                            //   height: 10,
+                            // )
                           ],
                         ),
                       ),
@@ -116,7 +134,8 @@ class _HomeViewState extends State<HomeView> {
                   )
                 ],
               ),
-              WorldWideDestination(screenSize: screenSize), //change
+              WorldWideDestination(screenSize: screenSize),
+              //change
               DestinationCarousel(),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),

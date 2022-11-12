@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:travalacom/widget.dart/responsive.dart';
 
-class FeaturedTiles extends StatelessWidget {
-  FeaturedTiles({
+class ReviewDetail extends StatelessWidget {
+  ReviewDetail({
     Key? key,
     required this.screenSize,
   }) : super(key: key);
@@ -13,9 +13,14 @@ class FeaturedTiles extends StatelessWidget {
     'assets/images/trekking.jpg',
     'assets/images/animals.jpg',
     'assets/images/photography.jpeg',
+    // 'assets/images/photography.jpeg',
   ];
 
-  final List<String> title = ['Trekking', 'Animals', 'Photography'];
+  final List<String> title = [
+    'Trekking',
+    'Animals',
+    'Photography',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -78,46 +83,45 @@ class FeaturedTiles extends StatelessWidget {
               left: screenSize.width / 15,
               right: screenSize.width / 15,
             ),
-            // child:
-            //  Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     ...Iterable<int>.generate(assets.length).map(
-            //       (int pageIndex) => Column(
-            //         children: [
-            //           SizedBox(
-            //             height: screenSize.width / 6,
-            //             width: screenSize.width / 3.8,
-            //             child: ClipRRect(
-            //               borderRadius: BorderRadius.circular(5.0),
-            //               child: Image.asset(
-            //                 assets[pageIndex],
-            //                 fit: BoxFit.cover,
-            //               ),
-            //             ),
-            //           ),
-            //           Padding(
-            //             padding: EdgeInsets.only(
-            //               top: screenSize.height / 70,
-            //             ),
-            //             child: Text(
-            //               title[pageIndex],
-            //               style: TextStyle(
-            //                 fontSize: 16,
-            //                 fontFamily: 'Montserrat',
-            //                 fontWeight: FontWeight.w500,
-            //                 color: Theme.of(context)
-            //                     .primaryTextTheme
-            //                     .subtitle1!
-            //                     .color,
-            //               ),
-            //             ),
-            //           ),
-            //         ],
-            //       ),
-            //     ),
-            //   ],
-            // ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ...Iterable<int>.generate(assets.length).map(
+                  (int pageIndex) => Column(
+                    children: [
+                      SizedBox(
+                        height: screenSize.width / 6,
+                        width: screenSize.width / 3.8,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(5.0),
+                          child: Image.asset(
+                            assets[pageIndex],
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          top: screenSize.height / 70,
+                        ),
+                        child: Text(
+                          title[pageIndex],
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w500,
+                            color: Theme.of(context)
+                                .primaryTextTheme
+                                .subtitle1!
+                                .color,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           );
   }
 }
