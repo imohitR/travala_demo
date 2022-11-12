@@ -19,7 +19,7 @@ class _FlightState extends State<Flight> {
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                     Colors.black.withOpacity(0.2), BlendMode.dstATop),
-                image: AssetImage(
+                image: const AssetImage(
                   'assets/images/cover.jpg',
                 ))),
         child: Column(

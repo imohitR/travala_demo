@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../widget/responsive.dart';
+import 'package:travalacom/widget/responsive.dart';
 
 class WorldWideDestination extends StatelessWidget {
   const WorldWideDestination({

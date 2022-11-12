@@ -4,21 +4,54 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'package:travalacom/home_view.dart';
+import 'package:travalacom/widget/Tabbar/Stays.dart';
+import 'package:travalacom/widget/Tabbar/activities.dart';
+import 'package:travalacom/widget/Tabbar/flights.dart';
+
+enum AppRoute {
+  home,
+  stays,
+  flight,
+  activities,
+}
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
-      // redirect: (state) {},
-      initialLocation: '/',
-      debugLogDiagnostics: kDebugMode,
-      errorBuilder: (context, state) => const PageNotFound(),
-      routes: [
-        GoRoute(
-          path: '/',
-          name: 'home',
-          pageBuilder: (context, state) => MaterialPage(
-              key: state.pageKey, fullscreenDialog: true, child: HomeView()),
-        ),
-      ]);
+    // redirect: (state) {},
+    initialLocation: '/',
+    debugLogDiagnostics: kDebugMode,
+    errorBuilder: (context, state) => const PageNotFound(),
+    routes: [
+      // GoRoute(
+      //   path: '/',
+      //   name: AppRoute.home.name,
+      //   redirect: (_) => '/dashboard/${dashBoardTabs[0]}',
+      // ),
+      GoRoute(
+        path: '/',
+        pageBuilder: (context, state) => MaterialPage(
+            key: state.pageKey, fullscreenDialog: true, child: HomeView()),
+      ),
+      GoRoute(
+        path: '/stays',
+        name: 'stays',
+        pageBuilder: (context, state) =>
+            MaterialPage(key: state.pageKey, child: Stays()),
+      ),
+      GoRoute(
+        path: '/flights',
+        name: 'flights',
+        pageBuilder: (context, state) =>
+            MaterialPage(key: state.pageKey, child: Flight()),
+      ),
+      GoRoute(
+        path: '/activities',
+        name: 'activities',
+        pageBuilder: (context, state) =>
+            MaterialPage(key: state.pageKey, child: Activities()),
+      ),
+    ],
+  );
 });
 
 class PageNotFound extends StatelessWidget {

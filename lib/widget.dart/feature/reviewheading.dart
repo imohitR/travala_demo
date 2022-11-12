@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travalacom/widget.dart/responsive.dart';
+
+import '../../widget/responsive.dart';
 
 class ReviewHeading extends StatelessWidget {
   const ReviewHeading({
