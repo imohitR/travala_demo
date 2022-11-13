@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travalacom/core/widget/bottom_bar.dart';
 import 'package:travalacom/theme/utils/app_sizes.dart';
 import 'package:travalacom/utils/replaced_range.dart';
-import 'package:travalacom/core/widget/bottom_bar.dart';
 import 'package:travalacom/core/widget/carousel.dart';
 import 'package:travalacom/core/widget/destination_heading.dart';
 import 'package:travalacom/core/widget/explore_drawer.dart';
@@ -108,29 +108,29 @@ class _HomeViewState extends State<HomeView> {
                     //   fit: BoxFit.cover,
                     // ),
                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    child: RichText(
-                      text: const TextSpan(
-                          text: 'BOOK HOTELS AND SAVE UP TO 40%',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 22.0,
-                            color: Colors.black,
-                          ),
-                          children: [
-                            TextSpan(
-                                text:
-                                    '\nBest Prices Guaranteed On 2,200,000+\n Hotels & Accommodations Worldwide',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18.0,
-                                  color: Colors.blueAccent,
-                                ))
-                          ]),
-                      textScaleFactor: ScaleSize.textScaleFactor(context),
-                    ),
-                  ),
+                  // Container(
+                  //   alignment: Alignment.center,
+                  //   child: RichText(
+                  //     text: const TextSpan(
+                  //         text: 'BOOK HOTELS AND SAVE UP TO 40%',
+                  //         style: TextStyle(
+                  //           fontWeight: FontWeight.bold,
+                  //           fontSize: 22.0,
+                  //           color: Colors.black,
+                  //         ),
+                  //         children: [
+                  //           TextSpan(
+                  //               text:
+                  //                   '\nBest Prices Guaranteed On 2,200,000+\n Hotels & Accommodations Worldwide',
+                  //               style: TextStyle(
+                  //                 fontWeight: FontWeight.bold,
+                  //                 fontSize: 18.0,
+                  //                 color: Colors.blueAccent,
+                  //               ))
+                  //         ]),
+                  //     textScaleFactor: ScaleSize.textScaleFactor(context),
+                  //   ),
+                  // ),
                   Column(
                     children: [
                       Tabbar(
