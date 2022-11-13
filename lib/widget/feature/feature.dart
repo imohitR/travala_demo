@@ -89,54 +89,70 @@ class Featured extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ...Iterable<int>.generate(assets.length).map(
-                  (int pageIndex) => Column(
-                    children: [
-                      SizedBox(
-                        height: screenSize.width / 6,
-                        width: screenSize.width / 3.8,
-                        child: ResponsiveRowColumnItem(
-                          rowFlex: 1,
-                          rowFit: FlexFit.tight,
-                          child: Column(
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 32),
-                                child: buildMaterialIconCircle(
-                                    "assets/images/icon_development.png", 68),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.only(bottom: 16),
-                                child: Text("Fast Development",
-                                    style: headlineSecondaryTextStyle,
-                                    textAlign: TextAlign.center),
-                              ),
-                              const Text(
-                                  "Paint your app to life in milliseconds with Stateful Hot Reload. Use a rich set of fully-customizable widgets to build native interfaces in minutes.",
-                                  style: bodyTextStyle,
-                                  textAlign: TextAlign.center),
-                            ],
-                          ),
+                SizedBox(
+                  height: screenSize.width / 6,
+                  width: screenSize.width / 3.8,
+                  child: ResponsiveRowColumnItem(
+                    rowFlex: 1,
+                    rowFit: FlexFit.tight,
+                    child: Column(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(bottom: 16),
+                          child: Text("Fast Development",
+                              style: headlineSecondaryTextStyle,
+                              textAlign: TextAlign.center),
                         ),
-                      ),
-                      // Padding(
-                      //   padding: EdgeInsets.only(
-                      //     top: screenSize.height / 70,
-                      //   ),
-                      //   child: Text(
-                      //     title[pageIndex],
-                      //     style: TextStyle(
-                      //       fontSize: 16,
-                      //       fontFamily: 'Montserrat',
-                      //       fontWeight: FontWeight.w500,
-                      //       color: Theme.of(context)
-                      //           .primaryTextTheme
-                      //           .subtitle1!
-                      //           .color,
-                      //     ),
-                      //   ),
-                      // ),
-                    ],
+                        Text(
+                            "Paint your app to life in milliseconds with Stateful Hot Reload. Use a rich set of fully-customizable widgets to build native interfaces in minutes.",
+                            style: bodyTextStyle,
+                            textAlign: TextAlign.center),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: screenSize.width / 6,
+                  width: screenSize.width / 3.8,
+                  child: ResponsiveRowColumnItem(
+                    rowFlex: 1,
+                    rowFit: FlexFit.tight,
+                    child: Column(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(bottom: 16),
+                          child: Text("Fast Development",
+                              style: headlineSecondaryTextStyle,
+                              textAlign: TextAlign.center),
+                        ),
+                        Text(
+                            "Paint your app to life in milliseconds with Stateful Hot Reload. Use a rich set of fully-customizable widgets to build native interfaces in minutes.",
+                            style: bodyTextStyle,
+                            textAlign: TextAlign.center),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: screenSize.width / 6,
+                  width: screenSize.width / 3.8,
+                  child: ResponsiveRowColumnItem(
+                    rowFlex: 1,
+                    rowFit: FlexFit.tight,
+                    child: Column(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(bottom: 16),
+                          child: Text("Fast Development",
+                              style: headlineSecondaryTextStyle,
+                              textAlign: TextAlign.center),
+                        ),
+                        Text(
+                            "Paint your app to life in milliseconds with Stateful Hot Reload. Use a rich set of fully-customizable widgets to build native interfaces in minutes.",
+                            style: bodyTextStyle,
+                            textAlign: TextAlign.center),
+                      ],
+                    ),
                   ),
                 ),
               ],

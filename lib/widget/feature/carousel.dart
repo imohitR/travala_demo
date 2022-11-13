@@ -24,8 +24,8 @@ class _CarouselPageState extends State<CarouselPage> {
       children: [
         SizedBox(
           // height: 300,
-          height: screenSize.height / 10,
-          width: double.infinity,
+          height: screenSize.height / 5,
+          width: double.maxFinite,
           child: PageView.builder(
             controller: controller,
             onPageChanged: (index) {
@@ -45,7 +45,7 @@ class _CarouselPageState extends State<CarouselPage> {
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 10,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
