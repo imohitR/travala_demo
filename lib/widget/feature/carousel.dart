@@ -36,7 +36,7 @@ class _CarouselPageState extends State<CarouselPage> {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Image.network(
+                child: Image.asset(
                   images[index % images.length],
                   fit: BoxFit.contain,
                 ),

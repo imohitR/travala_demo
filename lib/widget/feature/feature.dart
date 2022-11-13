@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_framework/responsive_row_column.dart';
+import 'package:travalacom/components/components.dart';
 
+import '../../components/icons.dart';
 import '../../widget/responsive.dart';
 
 class Featured extends StatelessWidget {
@@ -11,10 +14,9 @@ class Featured extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'assets/images/w1.jpg',
-    'assets/images/w2.jpg',
-    'assets/images/w3.jpg',
-    // 'assets/images/photography.jpeg',
+    'assets/images/w1.png',
+    'assets/images/w2.png',
+    'assets/images/w3.png',
   ];
 
   final List<String> title = [
@@ -93,31 +95,47 @@ class Featured extends StatelessWidget {
                       SizedBox(
                         height: screenSize.width / 6,
                         width: screenSize.width / 3.8,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(5.0),
-                          child: Image.asset(
-                            assets[pageIndex],
-                            fit: BoxFit.cover,
+                        child: ResponsiveRowColumnItem(
+                          rowFlex: 1,
+                          rowFit: FlexFit.tight,
+                          child: Column(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 32),
+                                child: buildMaterialIconCircle(
+                                    "assets/images/icon_development.png", 68),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.only(bottom: 16),
+                                child: Text("Fast Development",
+                                    style: headlineSecondaryTextStyle,
+                                    textAlign: TextAlign.center),
+                              ),
+                              const Text(
+                                  "Paint your app to life in milliseconds with Stateful Hot Reload. Use a rich set of fully-customizable widgets to build native interfaces in minutes.",
+                                  style: bodyTextStyle,
+                                  textAlign: TextAlign.center),
+                            ],
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                          top: screenSize.height / 70,
-                        ),
-                        child: Text(
-                          title[pageIndex],
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w500,
-                            color: Theme.of(context)
-                                .primaryTextTheme
-                                .subtitle1!
-                                .color,
-                          ),
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: EdgeInsets.only(
+                      //     top: screenSize.height / 70,
+                      //   ),
+                      //   child: Text(
+                      //     title[pageIndex],
+                      //     style: TextStyle(
+                      //       fontSize: 16,
+                      //       fontFamily: 'Montserrat',
+                      //       fontWeight: FontWeight.w500,
+                      //       color: Theme.of(context)
+                      //           .primaryTextTheme
+                      //           .subtitle1!
+                      //           .color,
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
