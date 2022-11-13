@@ -35,7 +35,7 @@ class Featured extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(width: screenSize.width / 15),
+                  SizedBox(width: screenSize.width / 50),
                   ...Iterable<int>.generate(assets.length).map(
                     (int pageIndex) => Row(
                       children: [
@@ -43,13 +43,13 @@ class Featured extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              height: screenSize.width / 2.5,
-                              width: screenSize.width / 1.5,
+                              height: screenSize.width / 2,
+                              width: screenSize.width / 1,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(5.0),
                                 child: Image.asset(
                                   assets[pageIndex],
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.contain,
                                 ),
                               ),
                             ),
