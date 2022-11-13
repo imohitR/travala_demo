@@ -103,34 +103,7 @@ class _HomeViewState extends State<HomeView> {
                   SizedBox(
                     height: screenSize.height * 0.90,
                     width: screenSize.width,
-                    // child: Image.asset(
-                    //   'assets/images/cover.jpg',
-                    //   fit: BoxFit.cover,
-                    // ),
                   ),
-                  // Container(
-                  //   alignment: Alignment.center,
-                  //   child: RichText(
-                  //     text: const TextSpan(
-                  //         text: 'BOOK HOTELS AND SAVE UP TO 40%',
-                  //         style: TextStyle(
-                  //           fontWeight: FontWeight.bold,
-                  //           fontSize: 22.0,
-                  //           color: Colors.black,
-                  //         ),
-                  //         children: [
-                  //           TextSpan(
-                  //               text:
-                  //                   '\nBest Prices Guaranteed On 2,200,000+\n Hotels & Accommodations Worldwide',
-                  //               style: TextStyle(
-                  //                 fontWeight: FontWeight.bold,
-                  //                 fontSize: 18.0,
-                  //                 color: Colors.blueAccent,
-                  //               ))
-                  //         ]),
-                  //     textScaleFactor: ScaleSize.textScaleFactor(context),
-                  //   ),
-                  // ),
                   Column(
                     children: [
                       Tabbar(
