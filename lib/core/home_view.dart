@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:travalacom/theme/utils/app_sizes.dart';
 import 'package:travalacom/utils/replaced_range.dart';
-import 'package:travalacom/widget/bottom_bar.dart';
-import 'package:travalacom/widget/carousel.dart';
-import 'package:travalacom/widget/destination_heading.dart';
-import 'package:travalacom/widget/explore_drawer.dart';
-import 'package:travalacom/widget/feature/Reviewdetail.dart';
-import 'package:travalacom/widget/feature/carousel.dart';
-import 'package:travalacom/widget/feature/reviewheading.dart';
-import 'package:travalacom/widget/featured_heading.dart';
-import 'package:travalacom/widget/featured_tiles.dart';
-import 'package:travalacom/widget/Tabbar/Tabbar.dart';
-import 'package:travalacom/widget/responsive.dart';
-import 'package:travalacom/widget/appbar/Desktop.dart';
-import 'package:travalacom/widget/web_scrollbar.dart';
+import 'package:travalacom/core/widget/bottom_bar.dart';
+import 'package:travalacom/core/widget/carousel.dart';
+import 'package:travalacom/core/widget/destination_heading.dart';
+import 'package:travalacom/core/widget/explore_drawer.dart';
+import 'package:travalacom/core/widget/feature/Reviewdetail.dart';
+import 'package:travalacom/core/widget/feature/carousel.dart';
+import 'package:travalacom/core/widget/feature/reviewheading.dart';
+import 'package:travalacom/core/widget/featured_heading.dart';
+import 'package:travalacom/core/widget/featured_tiles.dart';
+import 'package:travalacom/core/widget/Tabbar/Tabbar.dart';
+import 'package:travalacom/core/widget/responsive.dart';
+import 'package:travalacom/core/widget/appbar/Desktop.dart';
+import 'package:travalacom/core/widget/web_scrollbar.dart';
+import 'package:travalacom/worlddestination/categorybar.dart';
 import 'package:universal_html/js_util.dart';
 
 import 'widget/feature/feature.dart';
@@ -144,11 +145,9 @@ class _HomeViewState extends State<HomeView> {
                 child: Column(
                   children: [
                     Featured(screenSize: screenSize),
-
                     const Divider(),
                     gapH48,
                     const CarouselPage(),
-
                     ReviewHeading(screenSize: screenSize),
                     ReviewDetail(screenSize: screenSize),
                     WorldWideDestination(screenSize: screenSize), //change
@@ -156,10 +155,11 @@ class _HomeViewState extends State<HomeView> {
                     FeaturedHeading(
                       screenSize: screenSize,
                     ),
-                    FeaturedTiles(screenSize: screenSize)
+                    FeaturedTiles(screenSize: screenSize),
                   ],
                 ),
               ),
+              // CategoriesTabPage(),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),
             ],

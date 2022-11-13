@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travalacom/common_widgets/primary_button.dart';
 
-import '../router.dart';
+import '../core/router.dart';
 import '../theme/utils/app_sizes.dart';
 
 /// Placeholder widget showing a message and CTA to go back to the home screen.

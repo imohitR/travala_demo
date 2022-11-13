@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travalacom/widget/responsive.dart';
+import 'package:travalacom/core/widget/responsive.dart';
 
 class FeaturedHeading extends StatelessWidget {
   const FeaturedHeading({

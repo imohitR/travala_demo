@@ -1,6 +1,6 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:travalacom/home_view.dart';
+import 'package:travalacom/core/home_view.dart';
 import 'package:travalacom/theme/utils/app_sizes.dart';
 
 class TopBarContents extends StatefulWidget {

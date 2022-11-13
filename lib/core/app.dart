@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travalacom/router.dart';
+import 'package:travalacom/core/router.dart';
 import 'package:travalacom/theme/core/flex_theme_dark.dart';
 import 'package:travalacom/theme/core/flex_theme_light.dart';
 import 'package:travalacom/theme/core/theme_data_dark.dart';

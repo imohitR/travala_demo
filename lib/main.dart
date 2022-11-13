@@ -7,7 +7,7 @@ import 'package:travalacom/theme/shared/controllers/theme_controller.dart';
 import 'package:travalacom/theme/shared/services/theme_service.dart';
 import 'package:travalacom/theme/shared/services/theme_service_hive.dart';
 
-import 'app.dart';
+import 'core/app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

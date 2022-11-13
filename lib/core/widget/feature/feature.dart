@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_row_column.dart';
 import 'package:travalacom/components/components.dart';
 
-import '../../components/icons.dart';
+import '../../../components/icons.dart';
 import '../../widget/responsive.dart';
 
 class Featured extends StatelessWidget {

@@ -138,8 +138,8 @@ import '../responsive.dart';
 // }
 
 import 'package:flutter/material.dart';
-import 'package:travalacom/widget/Tabbar/Stays.dart';
-import 'package:travalacom/widget/Tabbar/flights.dart';
+import 'package:travalacom/core/widget/Tabbar/Stays.dart';
+import 'package:travalacom/core/widget/Tabbar/flights.dart';
 
 import 'activities.dart';
 

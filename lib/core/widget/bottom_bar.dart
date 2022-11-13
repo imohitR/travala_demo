@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travalacom/widget/bottom_bar_column.dart';
-import 'package:travalacom/widget/info_text.dart';
-import 'package:travalacom/widget/responsive.dart';
+import 'package:travalacom/core/widget/bottom_bar_column.dart';
+import 'package:travalacom/core/widget/info_text.dart';
+import 'package:travalacom/core/widget/responsive.dart';
 
 class BottomBar extends StatelessWidget {
   @override

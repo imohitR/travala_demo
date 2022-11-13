@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:travalacom/home_view.dart';
-import 'package:travalacom/widget/Tabbar/Stays.dart';
-import 'package:travalacom/widget/Tabbar/activities.dart';
-import 'package:travalacom/widget/Tabbar/flights.dart';
+import 'package:travalacom/core/home_view.dart';
+import 'package:travalacom/core/widget/Tabbar/Stays.dart';
+import 'package:travalacom/core/widget/Tabbar/activities.dart';
+import 'package:travalacom/core/widget/Tabbar/flights.dart';
+import 'package:travalacom/worlddestination/categorybar.dart';
 
 enum AppRoute {
   home,
