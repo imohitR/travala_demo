@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:travalacom/core/widget/Tabbar/Stays.dart';
 
 import '../responsive.dart';
 
@@ -137,11 +138,8 @@ import '../responsive.dart';
 //   }
 // }
 
-import 'package:flutter/material.dart';
-import 'package:travalacom/core/widget/Tabbar/Stays.dart';
-import 'package:travalacom/core/widget/Tabbar/flights.dart';
-
 import 'activities.dart';
+import 'flights.dart';
 
 class Tabbar extends StatefulWidget {
   final Size screenSize;
@@ -175,7 +173,7 @@ class _TabbarState extends State<Tabbar> with SingleTickerProviderStateMixin {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 150),
+              SizedBox(height: 20),
               const Align(
                 alignment: Alignment.centerLeft,
                 child: TabBar(
@@ -209,7 +207,7 @@ class _TabbarState extends State<Tabbar> with SingleTickerProviderStateMixin {
                 margin: const EdgeInsets.only(top: 15),
                 width: double.maxFinite,
                 height: 300,
-                child: const TabBarView(
+                child: TabBarView(
                   children: [
                     Stays(),
                     Flight(),
