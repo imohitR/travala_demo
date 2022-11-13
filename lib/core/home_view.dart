@@ -124,7 +124,10 @@ class _HomeViewState extends State<HomeView> {
                     ReviewHeading(screenSize: screenSize),
                     ReviewDetail(screenSize: screenSize),
                     WorldWideDestination(screenSize: screenSize), //change
-                    DestinationCarousel(),
+                    Container(
+                      height: 500,
+                      child: const CategoriesTabPage(),
+                    ),
                     FeaturedHeading(
                       screenSize: screenSize,
                     ),
@@ -132,7 +135,6 @@ class _HomeViewState extends State<HomeView> {
                   ],
                 ),
               ),
-              // CategoriesTabPage(),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),
             ],

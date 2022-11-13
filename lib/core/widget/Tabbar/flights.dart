@@ -11,13 +11,15 @@ class Flight extends StatefulWidget {
 class _FlightState extends State<Flight> {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return SizedBox(
-      height: 500,
+      height: screenSize.height * 0.45,
+      width: screenSize.width,
       child: Card(
         elevation: 1,
         color: Colors.white,
         child: SizedBox(
-          width: 500,
+          width: 400,
           height: 500,
           child: Column(
             children: [

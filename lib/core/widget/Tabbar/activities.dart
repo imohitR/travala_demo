@@ -12,17 +12,9 @@ class _ActivitiesState extends State<Activities> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
         height: screenSize.height * 0.45,
         width: screenSize.width,
-        // decoration: BoxDecoration(
-        //     image: DecorationImage(
-        //         fit: BoxFit.cover,
-        //         colorFilter: ColorFilter.mode(
-        //             Colors.black.withOpacity(0.2), BlendMode.dstATop),
-        //         image: const AssetImage(
-        //           'assets/images/cover.jpg',
-        //         ))),
         child: Column(
           children: [
             const Text(
@@ -40,7 +32,7 @@ class _ActivitiesState extends State<Activities> {
               "Best Prices Guaranteed on 410,000+ Activities,Tours and Experiences, Worldwide ",
               style: TextStyle(fontSize: 14.0),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SizedBox(
