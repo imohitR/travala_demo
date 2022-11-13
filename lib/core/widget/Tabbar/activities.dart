@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travalacom/utils/app_sizes.dart';
 
 class Activities extends StatefulWidget {
   const Activities({super.key});
@@ -44,37 +45,37 @@ class _ActivitiesState extends State<Activities> {
             ),
             SizedBox(
               height: 185,
-              // width not set try to do this
-
-              // width: screenSize.width / 12,
               child: Card(
                 color: Colors.white,
-                child: Column(
-                  children: [
-                    const ListTile(
-                      minLeadingWidth: 10,
-                      leading: Icon(Icons.search),
-                      title: Text('Find amazing things to do'),
-                    ),
-                    const ListTile(
-                      minLeadingWidth: 10,
-                      leading: Icon(Icons.date_range),
-                      title: Text('17-Nov 2022-18 Nov 20222'),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.65,
-                      child: MaterialButton(
-                        onPressed: () {},
-                        child: const Text('Search'),
-                        color: Colors.blue,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(5))),
+                child: SizedBox(
+                  width: 500,
+                  height: 500,
+                  child: Column(
+                    children: [
+                      const ListTile(
+                        minLeadingWidth: 10,
+                        leading: Icon(Icons.search),
+                        title: Text('Find amazing things to do'),
                       ),
-                    ),
-                    SizedBox(
-                      height: 1,
-                    )
-                  ],
+                      const ListTile(
+                        minLeadingWidth: 10,
+                        leading: Icon(Icons.date_range),
+                        title: Text('17-Nov 2022-18 Nov 20222'),
+                      ),
+                      gapH20,
+                      SizedBox(
+                        width: 400,
+                        child: MaterialButton(
+                          onPressed: () {},
+                          color: Colors.blue,
+                          shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5))),
+                          child: const Text('Search'),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

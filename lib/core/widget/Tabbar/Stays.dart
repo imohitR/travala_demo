@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travalacom/utils/app_sizes.dart';
 
 class Stays extends StatefulWidget {
   const Stays({super.key});
@@ -10,7 +11,10 @@ class Stays extends StatefulWidget {
 class _StaysState extends State<Stays> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    var screenSize = MediaQuery.of(context).size;
+    return Container(
+      height: screenSize.height * 0.45,
+      width: screenSize.width,
       child: Column(children: [
         const Text(
           "BOOK HOTELS AND SAVE UP TO 40%",
@@ -28,12 +32,16 @@ class _StaysState extends State<Stays> {
         const SizedBox(
           height: 10,
         ),
-        Center(
-          child: Card(
-            color: Color.fromARGB(255, 240, 235, 235),
+        Card(
+          elevation: 1,
+          color: Colors.white,
+          child: SizedBox(
+            width: 500,
+            height: 500,
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const ListTile(
                     leading: Icon(
@@ -57,36 +65,32 @@ class _StaysState extends State<Stays> {
                         onPressed: () {},
                         child: buildDateSelector('CHECK-IN', DateTime.now()),
                       ),
-                      Expanded(
-                          child: MaterialButton(
+                      gapW32,
+                      MaterialButton(
                         onPressed: () {},
                         child: buildDateSelector('CHECK-OUT', DateTime.now()),
-                      ))
+                      )
                     ],
                   ),
-                  const SizedBox(
-                    height: 15,
-                  ),
+                  // const SizedBox(
+                  //   height: 15,
+                  // ),
                   const ListTile(
                     leading: Icon(Icons.family_restroom),
                     title: Text("1 room - 2 adults - 0 child"),
                     minLeadingWidth: 10,
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    width: 300,
-                    height: 40,
-                    child: MaterialButton(
-                      color: Colors.blue,
-                      onPressed: () {},
-                      shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(9))),
-                      child: const Text(
-                        'Search',
-                        style: TextStyle(color: Colors.white),
-                      ),
+                  // const SizedBox(
+                  //   height: 10,
+                  // ),
+                  MaterialButton(
+                    color: Colors.blue,
+                    onPressed: () {},
+                    shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(9))),
+                    child: const Text(
+                      'Search',
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ],
@@ -120,7 +124,7 @@ Widget buildDateSelector(String title, DateTime dateTime) {
           ),
           const SizedBox(width: 8),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: const [Text('Fri'), Text('Nov')],
           )
         ],
