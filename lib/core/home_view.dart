@@ -130,7 +130,7 @@ class _HomeViewState extends State<HomeView> {
                       SizedBox(
                         // height: screenSize.height / 15,
                         width: screenSize.width,
-                        child: Center(
+                        child: const Center(
                           child: Text(
                               'Best Prices Guaranteed On 2,200,000+ Hotels & Accommodations Worldwide'),
                         ),
