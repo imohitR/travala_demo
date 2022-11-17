@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../widget/responsive.dart';
 
 class ReviewDetail extends StatefulWidget {
-  ReviewDetail({
+  const ReviewDetail({
     Key? key,
     required this.screenSize,
   }) : super(key: key);
@@ -25,9 +25,9 @@ class _ReviewDetailState extends State<ReviewDetail> {
     // 'assets/images/qw4.png',
   ];
   final List<String> assets = [
-    'assets/images/qw1.png',
-    'assets/images/qw2.png',
-    'assets/images/qw3.png',
+    'assets/images/rq1.png',
+    'assets/images/rq2.png',
+    'assets/images/rq3.png',
     // 'assets/images/qw4.png',
   ];
 

@@ -120,7 +120,7 @@ class _HomeViewState extends State<HomeView> {
                     Featured(screenSize: screenSize),
                     const Divider(),
                     gapH48,
-                    const CarouselPage(),
+                    CarouselPage(screenSize: screenSize),
                     ReviewHeading(screenSize: screenSize),
                     ReviewDetail(screenSize: screenSize),
                     WorldWideDestination(screenSize: screenSize), //change
