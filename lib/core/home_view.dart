@@ -137,6 +137,8 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               SizedBox(height: screenSize.height / 10),
+              Crypto(),
+              
               BottomBar(),
             ],
           ),
