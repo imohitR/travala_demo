@@ -13,15 +13,16 @@ class _FlightState extends State<Flight> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return SizedBox(
-      height: screenSize.height * 0.45,
+      // height: screenSize.height * 0.45,
       width: screenSize.width,
       child: Card(
-        elevation: 1,
+        // elevation: 1,
         color: Colors.white,
         child: SizedBox(
           width: 400,
           height: 500,
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Row(
                 children: [

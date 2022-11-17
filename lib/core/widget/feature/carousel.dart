@@ -12,8 +12,8 @@ class _CarouselPageState extends State<CarouselPage> {
   final PageController controller = PageController();
 
   List<String> images = [
-    'assets/images/q1.png',
-    'assets/images/q2.png',
+    'assets/images/ca1.png',
+    'assets/images/ca2.png',
   ];
 
   @override
@@ -23,8 +23,8 @@ class _CarouselPageState extends State<CarouselPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          // height: 300,
-          height: screenSize.height / 5,
+          height: 50,
+          // height: screenSize.height / 30,
           width: double.maxFinite,
           child: PageView.builder(
             controller: controller,

@@ -19,20 +19,22 @@ class _ReviewDetailState extends State<ReviewDetail> {
   final PageController controller = PageController();
 
   List<String> images = [
-    'assets/images/q1.png',
-    'assets/images/q2.png',
+    'assets/images/qw1.png',
+    'assets/images/qw2.png',
+    'assets/images/qw3.png',
+    // 'assets/images/qw4.png',
   ];
   final List<String> assets = [
-    'assets/images/trekking.jpg',
-    'assets/images/animals.jpg',
-    'assets/images/photography.jpeg',
-    // 'assets/images/photography.jpeg',
+    'assets/images/qe1.png',
+    'assets/images/qe2.png',
+    'assets/images/qe3.png',
+    // 'assets/images/qw4.png',
   ];
 
   final List<String> title = [
-    'Trekking',
-    'Animals',
-    'Photography',
+    'review1',
+    'review2',
+    'review3',
   ];
 
   @override
@@ -40,13 +42,13 @@ class _ReviewDetailState extends State<ReviewDetail> {
     var screenSize = MediaQuery.of(context).size;
     return ResponsiveWidget.isSmallScreen(context)
         ? Padding(
-            padding: EdgeInsets.only(top: widget.screenSize.height / 50),
+            padding: EdgeInsets.only(top: widget.screenSize.height / 100),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(width: widget.screenSize.width / 15),
+                  SizedBox(width: widget.screenSize.width / 5),
                   ...Iterable<int>.generate(assets.length).map(
                     (int pageIndex) => Row(
                       children: [
@@ -60,7 +62,7 @@ class _ReviewDetailState extends State<ReviewDetail> {
                                 borderRadius: BorderRadius.circular(5.0),
                                 child: Image.asset(
                                   assets[pageIndex],
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.contain,
                                 ),
                               ),
                             ),
@@ -95,7 +97,7 @@ class _ReviewDetailState extends State<ReviewDetail> {
             padding: EdgeInsets.only(
               top: widget.screenSize.height * 0.06,
               left: widget.screenSize.width / 15,
-              right: widget.screenSize.width / 15,
+              right: widget.screenSize.width / 10,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,9 +106,9 @@ class _ReviewDetailState extends State<ReviewDetail> {
                   children: [
                     SizedBox(
                       // height: 1000,
-                      // width: 1000,
+                      width: 1200,
                       height: widget.screenSize.height / 1.50,
-                      width: widget.screenSize.width / 1,
+                      // width: widget.screenSize.width / 1,
                       child: PageView.builder(
                         controller: controller,
                         onPageChanged: (index) {

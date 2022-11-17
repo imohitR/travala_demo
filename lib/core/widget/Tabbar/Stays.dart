@@ -11,68 +11,75 @@ class Stays extends StatefulWidget {
 class _StaysState extends State<Stays> {
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 1,
-      color: Colors.white,
-      child: SizedBox(
-        width: 500,
-        height: 500,
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const ListTile(
-                leading: Icon(
-                  Icons.search,
-                  color: Colors.blue,
-                ),
-                title: TextField(
-                  decoration: InputDecoration(
-                      hintText: 'Search for Places or Properties'),
-                ),
-                minLeadingWidth: 10,
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              Row(
-                children: [
-                  MaterialButton(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 24, vertical: 12),
-                    onPressed: () {},
-                    child: buildDateSelector('CHECK-IN', DateTime.now()),
+    return Center(
+      child: Card(
+        elevation: 1,
+        color: Colors.white,
+        child: SizedBox(
+          width: 500,
+          height: 500,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const ListTile(
+                  leading: Icon(
+                    Icons.search,
+                    color: Colors.blue,
                   ),
-                  gapW32,
-                  MaterialButton(
-                    onPressed: () {},
-                    child: buildDateSelector('CHECK-OUT', DateTime.now()),
-                  )
-                ],
-              ),
-              // const SizedBox(
-              //   height: 15,
-              // ),
-              const ListTile(
-                leading: Icon(Icons.family_restroom),
-                title: Text("1 room - 2 adults - 0 child"),
-                minLeadingWidth: 10,
-              ),
-              // const SizedBox(
-              //   height: 10,
-              // ),
-              MaterialButton(
-                color: Colors.blue,
-                onPressed: () {},
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(9))),
-                child: const Text(
-                  'Search',
-                  style: TextStyle(color: Colors.white),
+                  title: TextField(
+                    decoration: InputDecoration(
+                        hintText: 'Search for Places or Properties'),
+                  ),
+                  minLeadingWidth: 10,
                 ),
-              ),
-            ],
+                const SizedBox(
+                  height: 5,
+                ),
+                Row(
+                  children: [
+                    MaterialButton(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 24, vertical: 12),
+                      onPressed: () {},
+                      child: buildDateSelector('CHECK-IN', DateTime.now()),
+                    ),
+                    gapW32,
+                    Center(
+                      child: MaterialButton(
+                        onPressed: () {},
+                        child: buildDateSelector('CHECK-OUT', DateTime.now()),
+                      ),
+                    )
+                  ],
+                ),
+                // const SizedBox(
+                //   height: 15,
+                // ),
+                const ListTile(
+                  leading: Icon(Icons.family_restroom),
+                  title: Text("1 room - 2 adults - 0 child"),
+                  minLeadingWidth: 10,
+                ),
+                // const SizedBox(
+                //   height: 10,
+                // ),
+                SizedBox(
+                  width: 300,
+                  child: MaterialButton(
+                    color: Colors.blue,
+                    onPressed: () {},
+                    shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(9))),
+                    child: const Text(
+                      'Search',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

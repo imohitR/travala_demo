@@ -40,7 +40,7 @@ class _CategoriesTabPageState extends State<CategoriesTabPage>
               ? Container(
                   constraints: const BoxConstraints(maxHeight: 150.0),
                   child: Material(
-                      color: Colors.blue,
+                      color: Colors.grey,
                       child: TabBar(
                         controller: tabController,
                         isScrollable: false,

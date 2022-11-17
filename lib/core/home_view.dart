@@ -126,6 +126,7 @@ class _HomeViewState extends State<HomeView> {
                     WorldWideDestination(screenSize: screenSize), //change
                     Container(
                       height: 500,
+                      width: screenSize.width,
                       child: const CategoriesTabPage(),
                     ),
                     FeaturedHeading(
