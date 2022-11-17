@@ -1,5 +1,7 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:travalacom/core/widget/bottom_bar.dart';
+import 'package:travalacom/core/widget/feature/crypto.dart';
 import 'package:travalacom/theme/utils/app_sizes.dart';
 import 'package:travalacom/utils/replaced_range.dart';
 import 'package:travalacom/core/widget/carousel.dart';
@@ -98,11 +100,29 @@ class _HomeViewState extends State<HomeView> {
           physics: const ClampingScrollPhysics(),
           child: Column(
             children: [
+              const SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TyperAnimatedText(
+                      'BOOK HOTELS AND SAVE UP TO 40%',
+                      textStyle: const TextStyle(
+                          fontSize: 22, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
               Stack(
                 children: [
                   SizedBox(
                     height: screenSize.height * 0.90,
                     width: screenSize.width,
+                    child: Image.asset(
+                      'assets/images/cover.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   Column(
                     children: [
@@ -114,31 +134,28 @@ class _HomeViewState extends State<HomeView> {
                   )
                 ],
               ),
-              Container(
-                child: Column(
-                  children: [
-                    Featured(screenSize: screenSize),
-                    const Divider(),
-                    gapH48,
-                    CarouselPage(screenSize: screenSize),
-                    ReviewHeading(screenSize: screenSize),
-                    ReviewDetail(screenSize: screenSize),
-                    WorldWideDestination(screenSize: screenSize), //change
-                    Container(
-                      height: 500,
-                      width: screenSize.width,
-                      child: const CategoriesTabPage(),
-                    ),
-                    FeaturedHeading(
-                      screenSize: screenSize,
-                    ),
-                    FeaturedTiles(screenSize: screenSize),
-                  ],
-                ),
+
+              Featured(screenSize: screenSize),
+              const Divider(),
+              CarouselPage(screenSize: screenSize),
+              ReviewHeading(screenSize: screenSize),
+              ReviewDetail(screenSize: screenSize),
+              WorldWideDestination(screenSize: screenSize), //change
+              SizedBox(
+                height: 700,
+                width: screenSize.width,
+                child: const CategoriesTabPage(),
               ),
+              FeaturedHeading(
+                screenSize: screenSize,
+              ),
+              FeaturedTiles(screenSize: screenSize),
+
               SizedBox(height: screenSize.height / 10),
-              Crypto(),
-              
+              Crypto(
+                screenSize: screenSize,
+              ),
+
               BottomBar(),
             ],
           ),

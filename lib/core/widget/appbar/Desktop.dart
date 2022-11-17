@@ -152,7 +152,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                           ],
                         ),
                       ),
-                      gapW64,
+                      const SizedBox(
+                        width: 500,
+                      ),
                       InkWell(
                         onHover: (value) {
                           setState(() {

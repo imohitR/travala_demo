@@ -22,7 +22,6 @@ class _CarouselPageState extends State<CarouselPage> {
     'assets/images/q1.png',
     'assets/images/q2.png',
 
-
     // 'assets/images/qw4.png',
   ];
   final List<String> title = [
@@ -37,7 +36,6 @@ class _CarouselPageState extends State<CarouselPage> {
     return ResponsiveWidget.isSmallScreen(context)
         ? Padding(
             padding: EdgeInsets.only(
-
               left: widget.screenSize.width / 15,
               right: widget.screenSize.width / 10,
             ),
@@ -47,7 +45,7 @@ class _CarouselPageState extends State<CarouselPage> {
                 Column(
                   children: [
                     SizedBox(
-                      height: 100,
+                      height: 50,
                       width: 320,
                       // height: widget.screenSize.height / 1.50,
                       // width: widget.screenSize.width / 1.20,
@@ -88,49 +86,49 @@ class _CarouselPageState extends State<CarouselPage> {
             ),
           )
         : SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(width: widget.screenSize.width / 10),
-              ...Iterable<int>.generate(assets.length).map(
-                (int pageIndex) => Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: widget.screenSize.width / 2.5,
-                          width: widget.screenSize.width / 1.5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: Image.asset(
-                              assets[pageIndex],
-                              fit: BoxFit.fitWidth,
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(width: widget.screenSize.width / 10),
+                ...Iterable<int>.generate(assets.length).map(
+                  (int pageIndex) => Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: widget.screenSize.height / 4,
+                            width: widget.screenSize.width / 1.5,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5.0),
+                              child: Image.asset(
+                                assets[pageIndex],
+                                fit: BoxFit.fitWidth,
+                              ),
                             ),
                           ),
-                        ),
-                        Text(
-                          title[pageIndex],
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w500,
-                            color: Theme.of(context)
-                                .primaryTextTheme
-                                .subtitle1!
-                                .color,
+                          Text(
+                            title[pageIndex],
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.w500,
+                              color: Theme.of(context)
+                                  .primaryTextTheme
+                                  .subtitle1!
+                                  .color,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(width: widget.screenSize.width / 15),
-                  ],
+                        ],
+                      ),
+                      SizedBox(width: widget.screenSize.width / 15),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-        );
+              ],
+            ),
+          );
   }
 }
 
