@@ -100,20 +100,6 @@ class _HomeViewState extends State<HomeView> {
           physics: const ClampingScrollPhysics(),
           child: Column(
             children: [
-              const SizedBox(
-                height: 10,
-              ),
-              Center(
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TyperAnimatedText(
-                      'BOOK HOTELS AND SAVE UP TO 40%',
-                      textStyle: const TextStyle(
-                          fontSize: 22, fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-              ),
               Stack(
                 children: [
                   SizedBox(
@@ -126,10 +112,34 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   Column(
                     children: [
+                      SizedBox(
+                        height: screenSize.height / 10,
+                        width: screenSize.width,
+                        child: Center(
+                          child: AnimatedTextKit(
+                            animatedTexts: [
+                              TyperAnimatedText(
+                                'BOOK HOTELS AND SAVE UP TO 40%',
+                                textStyle: const TextStyle(
+                                    fontSize: 35, fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Center(
+                        child: SizedBox(
+                          // height: screenSize.height / 15,
+                          width: screenSize.width,
+                          child: const Center(
+                            child: Text(
+                                'Best Prices Guaranteed On 2,200,000+ Hotels & Accommodations Worldwide'),
+                          ),
+                        ),
+                      ),
                       Tabbar(
                         screenSize: screenSize,
                       ),
-                      // FloatingQuickAccessBar(screenSize: screenSize),
                     ],
                   )
                 ],
