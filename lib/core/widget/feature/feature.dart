@@ -48,7 +48,7 @@ class Featured extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              height: screenSize.width / 2,
+                              height: screenSize.height / 2,
                               width: screenSize.width / 1,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(5.0),

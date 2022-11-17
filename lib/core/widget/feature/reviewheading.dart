@@ -14,7 +14,7 @@ class ReviewHeading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: screenSize.height * 0.06,
+        // top: screenSize.height * 0.03,
         left: screenSize.width / 15,
         right: screenSize.width / 15,
       ),
@@ -42,9 +42,10 @@ class ReviewHeading extends StatelessWidget {
               ],
             )
           : Container(
+              color: Colors.white38,
               padding: EdgeInsets.only(
                 top: screenSize.height / 10,
-                bottom: screenSize.height / 15,
+                // bottom: screenSize.height / 15,
               ),
               width: screenSize.width,
               // color: Colors.black,

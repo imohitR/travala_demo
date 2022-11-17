@@ -1,7 +1,7 @@
 final List<Category> categories = [
   Category(
     id: 1,
-    name: 'asia',
+    name: 'ASIA',
     subCategories: [
       SubCategory(id: 11, name: '', products: [
         Product(id: 111, name: '', image: 'assets/ct.2.webp'),
@@ -14,7 +14,7 @@ final List<Category> categories = [
   ),
   Category(
     id: 2,
-    name: 'europe',
+    name: 'EUROPE',
     subCategories: [
       SubCategory(id: 21, name: '', products: [
         Product(id: 211, name: '', image: 'assets/ct.2.webp'),
@@ -27,7 +27,7 @@ final List<Category> categories = [
   ),
   Category(
     id: 3,
-    name: 'america',
+    name: 'AMERICA',
     subCategories: [
       SubCategory(id: 21, name: 'Subcategory21', products: [
         Product(id: 211, name: '', image: 'assets/ct.7.webp'),
@@ -40,7 +40,7 @@ final List<Category> categories = [
   ),
   Category(
     id: 4,
-    name: 'south africa',
+    name: 'SOUTH AFRICA',
     subCategories: [
       SubCategory(id: 21, name: '', products: [
         Product(id: 211, name: '', image: 'assets/ct.6.webp'),

@@ -40,16 +40,18 @@ class _CategoriesTabPageState extends State<CategoriesTabPage>
               ? Container(
                   constraints: const BoxConstraints(maxHeight: 150.0),
                   child: Material(
-                      color: Colors.grey,
+                      // color: Colors.grey,
                       child: TabBar(
-                        controller: tabController,
-                        isScrollable: false,
-                        indicatorColor: const Color(0xFFFBD30E),
-                        indicatorWeight: 3,
-                        tabs: categories
-                            .map((category) => Tab(text: category.name))
-                            .toList(),
-                      )),
+                    labelColor: Colors.black,
+                    unselectedLabelColor: Colors.grey,
+                    controller: tabController,
+                    isScrollable: false,
+                    indicatorColor: const Color(0xFFFBD30E),
+                    indicatorWeight: 3,
+                    tabs: categories
+                        .map((category) => Tab(text: category.name))
+                        .toList(),
+                  )),
                 )
               : Container(),
           Expanded(
@@ -101,8 +103,8 @@ class _SubCategoryWidgetState extends State<SubCategoryWidget>
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    double itemWidth = (size.width - 5.0 * 2 - 17) / 3;
-    double itemHeight = itemWidth + 66;
+    double itemWidth = (size.width - 5.0 * 2 - 17) / 8;
+    double itemHeight = (size.height - 5.0 * 2 - 17) / 8;
 
     return TabBarView(
       controller: _tabController,
@@ -126,7 +128,7 @@ class _SubCategoryWidgetState extends State<SubCategoryWidget>
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        // color: Colors.white,
                         borderRadius: const BorderRadius.all(
                           Radius.circular(14.0),
                         ),
@@ -161,8 +163,9 @@ class _SubCategoryWidgetState extends State<SubCategoryWidget>
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         fontSize: 12,
+                        fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.w700,
-                        color: Colors.grey,
+                        color: Colors.black,
                       ),
                       textAlign: TextAlign.center,
                     ),

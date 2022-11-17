@@ -23,37 +23,16 @@ class Crypto extends StatelessWidget {
       location: 'assets/images/icon2.jpg',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
+      location: 'assets/images/icon3.png',
     ),
     ImageItems(
-      location: 'assets/images/icon2.jpg',
+      location: 'assets/images/icon4.png',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
+      location: 'assets/images/icon5.png',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon1.webp',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon2.jpg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon1.webp',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon2.jpg',
+      location: 'assets/images/icon6.png',
     ),
     ImageItems(
       location: 'assets/images/icon1.webp',
@@ -62,7 +41,16 @@ class Crypto extends StatelessWidget {
       location: 'assets/images/icon2.jpg',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
+      location: 'assets/images/icon3.png',
+    ),
+    ImageItems(
+      location: 'assets/images/icon4.png',
+    ),
+    ImageItems(
+      location: 'assets/images/icon5.png',
+    ),
+    ImageItems(
+      location: 'assets/images/icon6.png',
     ),
     ImageItems(
       location: 'assets/images/icon1.webp',
@@ -71,64 +59,16 @@ class Crypto extends StatelessWidget {
       location: 'assets/images/icon2.jpg',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
+      location: 'assets/images/icon3.png',
     ),
     ImageItems(
-      location: 'assets/images/icon1.webp',
+      location: 'assets/images/icon4.png',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
+      location: 'assets/images/icon5.png',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon2.jpg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon2.jpg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon2.jpg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon1.webp',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon2.jpg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon1.webp',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
+      location: 'assets/images/icon6.png',
     ),
     ImageItems(
       location: 'assets/images/icon1.webp',
@@ -137,28 +77,16 @@ class Crypto extends StatelessWidget {
       location: 'assets/images/icon2.jpg',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
+      location: 'assets/images/icon3.png',
     ),
     ImageItems(
-      location: 'assets/images/icon2.jpg',
+      location: 'assets/images/icon4.png',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
+      location: 'assets/images/icon5.png',
     ),
     ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon2.jpg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
-    ),
-    ImageItems(
-      location: 'assets/images/icon2.jpg',
-    ),
-    ImageItems(
-      location: 'assets/images/firstcard.jpeg',
+      location: 'assets/images/icon6.png',
     ),
   ];
 
@@ -197,7 +125,7 @@ class Crypto extends StatelessWidget {
                     separatorBuilder: (context, _) => const SizedBox(
                           width: 20,
                         ),
-                    itemCount: 25))
+                    itemCount: 23))
           ],
         )
         // : Row(

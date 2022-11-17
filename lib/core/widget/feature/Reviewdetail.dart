@@ -42,8 +42,8 @@ class _ReviewDetailState extends State<ReviewDetail> {
     var screenSize = MediaQuery.of(context).size;
     return ResponsiveWidget.isSmallScreen(context)
         ? Container(
-      color: Colors.white38,
-          child: Padding(
+            color: Colors.white38,
+            child: Padding(
               padding: EdgeInsets.only(top: widget.screenSize.height / 100),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -95,14 +95,15 @@ class _ReviewDetailState extends State<ReviewDetail> {
                 ),
               ),
             ),
-        )
+          )
         : Container(
-      color: Colors.white38,
-          child: Padding(
+            color: Colors.white38,
+            child: Padding(
               padding: EdgeInsets.only(
-                top: widget.screenSize.height * 0.06,
+                top: widget.screenSize.height / 10,
                 left: widget.screenSize.width / 15,
                 right: widget.screenSize.width / 10,
+                bottom: widget.screenSize.height / 20,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -112,7 +113,7 @@ class _ReviewDetailState extends State<ReviewDetail> {
                       SizedBox(
                         // height: 1000,
                         // width: 1500,
-                        height: widget.screenSize.height / 1.50,
+                        height: widget.screenSize.height / 4,
                         width: widget.screenSize.width / 1.20,
                         child: PageView.builder(
                           controller: controller,
@@ -123,9 +124,9 @@ class _ReviewDetailState extends State<ReviewDetail> {
                           },
                           itemBuilder: (context, index) {
                             return Container(
-
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
                                 child: Image.asset(
                                   images[index % images.length],
                                   fit: BoxFit.contain,
@@ -150,13 +151,13 @@ class _ReviewDetailState extends State<ReviewDetail> {
                 ],
               ),
             ),
-        );
+          );
   }
 }
 
 Widget buildIndicator(bool isSelected) {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 1),
+    padding: const EdgeInsets.symmetric(horizontal: 2),
     child: Container(
       height: isSelected ? 12 : 10,
       width: isSelected ? 12 : 10,

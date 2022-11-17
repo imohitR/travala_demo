@@ -10,12 +10,15 @@ class FeaturedTiles extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'assets/images/trekking.jpg',
-    'assets/images/animals.jpg',
-    'assets/images/photography.jpeg',
+    'assets/wd.1.webp',
+    'assets/wd.3.jpg',
+    'assets/wd.4.webp',
+    // 'assets/wd.12.webp',
+    // 'assets/wd.8.jpg',
+    // 'assets/wd.9.webp',
   ];
 
-  final List<String> title = ['Trekking', 'Animals', 'Photography'];
+  final List<String> title = ['India', 'Italy', 'London'];
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +77,7 @@ class FeaturedTiles extends StatelessWidget {
           )
         : Padding(
             padding: EdgeInsets.only(
-              top: screenSize.height * 0.06,
+              // top: screenSize.height * 0.06,
               left: screenSize.width / 15,
               right: screenSize.width / 15,
             ),

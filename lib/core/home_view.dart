@@ -146,16 +146,16 @@ class _HomeViewState extends State<HomeView> {
                 width: screenSize.width,
                 child: const CategoriesTabPage(),
               ),
+              const Divider(),
               FeaturedHeading(
                 screenSize: screenSize,
               ),
               FeaturedTiles(screenSize: screenSize),
 
-              SizedBox(height: screenSize.height / 10),
+              // SizedBox(height: screenSize.height / 10),
               Crypto(
                 screenSize: screenSize,
               ),
-
               BottomBar(),
             ],
           ),
