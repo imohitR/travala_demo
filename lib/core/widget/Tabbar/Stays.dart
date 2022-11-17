@@ -45,7 +45,7 @@ class _StaysState extends State<Stays> {
                       onPressed: () {},
                       child: buildDateSelector('CHECK-IN', DateTime.now()),
                     ),
-                    gapW32,
+                    gapW48,
                     Center(
                       child: MaterialButton(
                         onPressed: () {},
@@ -65,16 +65,18 @@ class _StaysState extends State<Stays> {
                 // const SizedBox(
                 //   height: 10,
                 // ),
-                SizedBox(
-                  width: 300,
-                  child: MaterialButton(
-                    color: Colors.blue,
-                    onPressed: () {},
-                    shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(9))),
-                    child: const Text(
-                      'Search',
-                      style: TextStyle(color: Colors.white),
+                Center(
+                  child: SizedBox(
+                    width: 300,
+                    child: MaterialButton(
+                      color: Colors.blue,
+                      onPressed: () {},
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(9))),
+                      child: const Text(
+                        'Search',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                 ),
