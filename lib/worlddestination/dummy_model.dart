@@ -1,7 +1,7 @@
 final List<Category> categories = [
   Category(
     id: 1,
-    name: 'Category1',
+    name: 'asia',
     subCategories: [
       SubCategory(id: 11, name: 'Subcategory11', products: [
         Product(id: 111, name: 'Product111', image: 'assets/veg.png'),
@@ -28,7 +28,61 @@ final List<Category> categories = [
   ),
   Category(
     id: 2,
-    name: 'Category2',
+    name: 'europe',
+    subCategories: [
+      SubCategory(id: 21, name: 'Subcategory21', products: [
+        Product(id: 211, name: 'Product211', image: 'assets/images/cover.jpg'),
+        Product(id: 212, name: 'Product212', image: 'assets/veg.png'),
+        Product(id: 213, name: 'Product213', image: 'assets/veg.png'),
+        Product(id: 214, name: 'Product214', image: 'assets/veg.png'),
+        Product(id: 215, name: 'Product215', image: 'assets/veg.png'),
+      ]),
+      SubCategory(id: 22, name: 'Subcategory22', products: [
+        Product(id: 221, name: 'Product221', image: 'assets/veg.png'),
+        Product(id: 222, name: 'Product222', image: 'assets/veg.png'),
+        Product(id: 223, name: 'Product223', image: 'assets/veg.png'),
+        Product(id: 224, name: 'Product224', image: 'assets/veg.png'),
+        Product(id: 225, name: 'Product225', image: 'assets/veg.png'),
+      ]),
+      SubCategory(id: 23, name: 'Subcategory23', products: [
+        Product(id: 231, name: 'Product231', image: 'assets/veg.png'),
+        Product(id: 232, name: 'Product232', image: 'assets/veg.png'),
+        Product(id: 233, name: 'Product233', image: 'assets/veg.png'),
+        Product(id: 234, name: 'Product234', image: 'assets/veg.png'),
+        Product(id: 235, name: 'Product235', image: 'assets/veg.png'),
+      ]),
+    ],
+  ),
+  Category(
+    id: 3,
+    name: 'america',
+    subCategories: [
+      SubCategory(id: 21, name: 'Subcategory21', products: [
+        Product(id: 211, name: 'Product211', image: 'assets/images/cover.jpg'),
+        Product(id: 212, name: 'Product212', image: 'assets/veg.png'),
+        Product(id: 213, name: 'Product213', image: 'assets/veg.png'),
+        Product(id: 214, name: 'Product214', image: 'assets/veg.png'),
+        Product(id: 215, name: 'Product215', image: 'assets/veg.png'),
+      ]),
+      SubCategory(id: 22, name: 'Subcategory22', products: [
+        Product(id: 221, name: 'Product221', image: 'assets/veg.png'),
+        Product(id: 222, name: 'Product222', image: 'assets/veg.png'),
+        Product(id: 223, name: 'Product223', image: 'assets/veg.png'),
+        Product(id: 224, name: 'Product224', image: 'assets/veg.png'),
+        Product(id: 225, name: 'Product225', image: 'assets/veg.png'),
+      ]),
+      SubCategory(id: 23, name: 'Subcategory23', products: [
+        Product(id: 231, name: 'Product231', image: 'assets/veg.png'),
+        Product(id: 232, name: 'Product232', image: 'assets/veg.png'),
+        Product(id: 233, name: 'Product233', image: 'assets/veg.png'),
+        Product(id: 234, name: 'Product234', image: 'assets/veg.png'),
+        Product(id: 235, name: 'Product235', image: 'assets/veg.png'),
+      ]),
+    ],
+  ),
+  Category(
+    id: 4,
+    name: 'south africa',
     subCategories: [
       SubCategory(id: 21, name: 'Subcategory21', products: [
         Product(id: 211, name: 'Product211', image: 'assets/images/cover.jpg'),

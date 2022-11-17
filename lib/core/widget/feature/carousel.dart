@@ -12,8 +12,8 @@ class _CarouselPageState extends State<CarouselPage> {
   final PageController controller = PageController();
 
   List<String> images = [
-    'assets/images/ca1.png',
-    'assets/images/ca2.png',
+    'assets/images/r1.png',
+    'assets/images/r2.png',
   ];
 
   @override
