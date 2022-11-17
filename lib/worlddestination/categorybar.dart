@@ -33,7 +33,7 @@ class _CategoriesTabPageState extends State<CategoriesTabPage>
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 100,
       child: Column(
         children: [
           showTab
